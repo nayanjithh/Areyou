@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ARE YOU?</title>
+        <link rel="stylesheet" href="idiot.css">
+    </head>
+    <body>
+        <div class="form">
+            <p>Are you an Idiot?</p>
+            <div class="try"></div>
+            <div>
+                <button class="yes" onclick="window.location.href='yes.html'">Yes</button>
+                <button class="no" onclick="change()">No</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        function change(){
+            let a=Math.random()*100;
+            let b=Math.random()*100;
+            const value=document.querySelector('.no');
+            value.style.position="absolute";
+            value.style.right=a+'%';
+            value.style.top=b+'%';
+            document.querySelector('.try').innerHTML="Try again!";
+        }
+    </script>
+</html>
